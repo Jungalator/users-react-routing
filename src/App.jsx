@@ -1,7 +1,17 @@
+import { Routes, Route } from "react-router";
+import { Layout } from "./components/layouts/Layout";
+import { HomePage } from "./pages/HomePage/HomePage";
+import { useState } from "react";
+
 function App() {
+  const [page, setPage] = useState("/");
   return (
     <>
-      <h1>Vite + React</h1>
+      <Routes>
+        <Route path="/" element={<Layout page={page} />}>
+          <Route index element={<HomePage />}></Route>
+        </Route>
+      </Routes>
     </>
   );
 }
