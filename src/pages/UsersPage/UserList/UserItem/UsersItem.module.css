@@ -1,0 +1,28 @@
+.usersItem {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 1px rgb(174, 174, 174);
+  margin: 0 0 20px 0;
+  padding: 10px 15px 10px 15px;
+  color: #696969;
+  font-weight: 500;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.usersItemAvatar {
+  width: 15%;
+  height: 15%;
+  border: none;
+  border-radius: 50%;
+}
+
+.usersItem:hover {
+  box-shadow: 0 0 10px 3px rgb(174, 174, 174);
+}
+
+ul {
+  list-style: none;
+}

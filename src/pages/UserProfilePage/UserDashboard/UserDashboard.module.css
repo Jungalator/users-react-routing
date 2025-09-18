@@ -1,0 +1,19 @@
+.userDashboard {
+  margin: 30px 0 0 0;
+  width: 25%;
+}
+
+.userDashboardList {
+  list-style: none;
+  margin: 0;
+}
+
+.userDashboardList > li {
+  margin: 0 0 20px 0;
+  padding: 15px 20px;
+  background-color: white;
+  color: #696969;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 1px rgb(174, 174, 174);
+}

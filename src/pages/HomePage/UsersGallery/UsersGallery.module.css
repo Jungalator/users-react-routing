@@ -1,0 +1,13 @@
+.gallerySection {
+  width: 80%;
+  overflow: scroll;
+}
+
+.galleryList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}

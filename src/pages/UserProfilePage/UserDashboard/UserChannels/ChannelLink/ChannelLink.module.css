@@ -1,0 +1,15 @@
+.userChannelsItem {
+  width: 30px;
+  height: 30px;
+  transition-duration: 0.2s;
+}
+.channelLink {
+  height: 100%;
+  width: 100%;
+  color: #696969;
+  fill: #696969;
+}
+
+.userChannelsItem:hover {
+  transform: scale(1.3);
+}

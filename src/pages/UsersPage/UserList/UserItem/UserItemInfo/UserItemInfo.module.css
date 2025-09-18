@@ -1,0 +1,10 @@
+.usersInfoList {
+  padding: 0;
+  width: 30%;
+}
+
+.usersInfoEmail {
+  color: #474747;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
