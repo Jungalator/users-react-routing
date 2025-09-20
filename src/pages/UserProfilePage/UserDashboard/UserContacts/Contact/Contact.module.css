@@ -1,12 +1,12 @@
 a {
   text-decoration: none;
-  color: #696969;
+  color: #fff;
   display: block;
   margin: 0 0 10px 0;
 }
 
 .contactTitle {
-  color: #4a4a4a;
+  color: #fff;
   margin: 0 0 5px 0;
   font-weight: 600;
 }
@@ -14,7 +14,7 @@ a {
 .userContact {
   font-size: smaller;
   overflow: scroll;
-  color: #3b3b3b;
+  color: #fff;
   transition-duration: 0.2s;
 }
 

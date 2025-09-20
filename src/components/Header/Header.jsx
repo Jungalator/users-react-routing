@@ -1,19 +1,15 @@
-import { useLocation, useNavigate, useParams } from "react-router";
+import { GoBackBtn } from "./GoBackBtn/GoBackBtn";
 import s from "./Header.module.css";
+import { LogOutBtn } from "./LogOutBtn";
 
 export const Header = () => {
-  const location = useLocation();
-  const params = useParams();
-  const navigate = useNavigate();
-  const goBack = () => navigate(-1);
-
   return (
     <header className={s.header}>
-      {location.pathname === `/users/${params.userId}` && (
-        <button className={s.goBackBtn} onClick={goBack}>
-          Go back
-        </button>
-      )}
+      <img src="/public/images/Logo.png" alt="Logo users" width="5%" />
+      <nav className={s.nav}>
+        <GoBackBtn />
+        <LogOutBtn />
+      </nav>
     </header>
   );
 };

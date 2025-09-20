@@ -13,5 +13,11 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #eaebed;
+  background: #020024;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(105, 105, 105, 1) 53%,
+    rgba(234, 235, 237, 1) 100%
+  );
 }
