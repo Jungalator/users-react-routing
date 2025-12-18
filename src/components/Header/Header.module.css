@@ -15,3 +15,17 @@
   width: 20%;
   display: flex;
 }
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+.logoText {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

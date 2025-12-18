@@ -17,7 +17,6 @@ function App() {
     setPage(location.pathname);
     setLocalValue(location.pathname);
   }, [location.pathname, setLocalValue]);
-  console.log();
 
   return (
     <AuthProvider>

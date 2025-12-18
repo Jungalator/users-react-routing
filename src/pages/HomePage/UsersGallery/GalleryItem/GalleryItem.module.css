@@ -1,6 +1,6 @@
 .galleryItem {
-  width: 30%;
-  height: 40vh;
+  width: 230px;
+  height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;

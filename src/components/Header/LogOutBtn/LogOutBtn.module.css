@@ -6,7 +6,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  color: #696969;
+  color: #fff;
   transition-duration: 0.1s;
 }
 .logoutBtn:hover {

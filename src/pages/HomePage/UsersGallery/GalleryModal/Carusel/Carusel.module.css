@@ -1,0 +1,33 @@
+.carusel {
+  width: 100vw;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderBtn {
+  width: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  color: white;
+  background: none;
+  font-size: xx-large;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: ease-in-out 0.2s;
+}
+
+.sliderBtn:hover {
+  background: rgb(0, 0, 0, 30%);
+}
+
+.next {
+  right: 0;
+}

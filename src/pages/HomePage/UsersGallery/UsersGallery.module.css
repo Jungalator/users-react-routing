@@ -1,11 +1,13 @@
 .gallerySection {
-  width: 80%;
-  overflow: scroll;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .galleryList {
   display: flex;
   justify-content: center;
+  overflow-y: scroll;
+  height: 85vh;
   flex-wrap: wrap;
   gap: 2rem;
   list-style: none;

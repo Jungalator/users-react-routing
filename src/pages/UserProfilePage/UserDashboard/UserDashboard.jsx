@@ -4,9 +4,6 @@ import { UserChannels } from "./UserChannels";
 import s from "./UserDashboard.module.css";
 
 export const UserDashboard = ({ user }) => {
-  //   console.log(currentUser.birthdate);
-  //   console.log(new Date().getTime());
-
   return (
     <aside className={s.userDashboard}>
       <ul className={s.userDashboardList}>

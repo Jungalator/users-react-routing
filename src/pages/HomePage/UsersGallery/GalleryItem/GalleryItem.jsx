@@ -4,7 +4,7 @@ export const GalleryItem = ({ user, handleOpenImg }) => {
     <li className={s.galleryItem}>
       {user.image1 ? (
         <img
-          onClick={() => handleOpenImg(user.id)}
+          onClick={handleOpenImg}
           className={s.galleryImg}
           src={`${user.image1}`}
           alt="Image of user"
