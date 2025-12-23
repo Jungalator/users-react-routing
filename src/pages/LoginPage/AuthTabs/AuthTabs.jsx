@@ -13,7 +13,7 @@ export default function AuthTabs({ toggleActiveTab, tab }) {
         className={`${s.tab} ${"log" === tab && s.active}`}
         onClick={() => toggleActiveTab("log")}
       >
-        <p className={s.tabText}>Log in</p>
+        <p className={s.tabText}>Sign up</p>
       </li>
     </ul>
   );
