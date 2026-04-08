@@ -1,25 +1,39 @@
-import { createContext, useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import { createContext, useState, useContext, useEffect } from "react";
+import { auth } from "../firebase";
 export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    const savedUser = localStorage.getItem("user");
-    return savedUser ? JSON.parse(savedUser) : null;
-  });
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const signIn = (newUser, cb) => {
-    setUser(newUser);
-    localStorage.setItem("user", JSON.stringify(newUser));
-    cb?.();
-  };
+  const login = (email, password) =>
+    signInWithEmailAndPassword(auth, email, password);
 
-  const signOut = (cb) => {
-    setUser(null);
-    localStorage.removeItem("user");
-    cb?.();
-  };
+  const register = (email, password) =>
+    createUserWithEmailAndPassword(auth, email, password);
 
-  const value = { user, signIn, signOut };
+  const logout = () => signOut(auth);
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    return unsubscribe;
+  }, []);
+
+  return (
+    <AuthContext.Provider value={{ user, login, logout, register, loading }}>
+      {!loading && children}
+    </AuthContext.Provider>
+  );
 };
+
+export const useAuth = () => useContext(AuthContext);

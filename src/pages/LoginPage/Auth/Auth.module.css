@@ -38,3 +38,10 @@
 .formButton:hover {
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.2);
 }
+
+.errorMessage {
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: rgb(203, 2, 2);
+  font-weight: 600;
+}

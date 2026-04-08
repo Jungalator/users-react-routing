@@ -2,15 +2,29 @@ import s from "../Auth.module.css";
 import { LoginInput } from "../LoginInput/LoginInput";
 import { PasswordVisibleBtn } from "../LoginInput/PasswordVisibleBtn/PasswordVisibleBtn";
 
-export default function SignIn({ visiblePassword, isVisible, handleSubmit }) {
+export default function SignIn({
+  visiblePassword,
+  isVisible,
+  handleSubmit,
+  onChangeSignIn,
+  userSignIn,
+}) {
   return (
     <form onSubmit={handleSubmit}>
-      <LoginInput labelText="Login" inputType="text" userName="userName" />
+      <LoginInput
+        labelText="Email"
+        inputType="email"
+        userName="email"
+        onChangeSign={onChangeSignIn}
+        value={userSignIn.email}
+      />
       <LoginInput
         labelText="Password"
         inputType={`${isVisible ? "text" : "password"}`}
         userName="password"
         minLength={8}
+        onChangeSign={onChangeSignIn}
+        value={userSignIn.password}
       >
         <PasswordVisibleBtn
           visiblePassword={visiblePassword}

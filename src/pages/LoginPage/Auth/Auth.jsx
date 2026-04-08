@@ -1,6 +1,5 @@
 import AuthTabs from "../AuthTabs/AuthTabs";
 import s from "./Auth.module.css";
-import { useState } from "react";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 
@@ -8,13 +7,15 @@ export const Auth = ({
   handleSubmit,
   toggleActiveTab,
   tab,
-  logInSubmit,
-  onChangeSignUp,
+  signUpSubmit,
+  onChangeSign,
+  onChangeSignIn,
+  errorMessage,
+  isVisible,
+  visiblePassword,
+  userSignUp,
+  userSignIn,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const visiblePassword = () => {
-    setIsVisible((prev) => !prev);
-  };
   return (
     <div className={s.formContainer}>
       <AuthTabs
@@ -22,18 +23,22 @@ export const Auth = ({
         tab={tab}
         isVisible={isVisible}
       />
+      <p className={s.errorMessage}>{errorMessage}</p>
       {tab === "sign" ? (
         <SignIn
           visiblePassword={visiblePassword}
           handleSubmit={handleSubmit}
           isVisible={isVisible}
+          onChangeSignIn={onChangeSignIn}
+          userSignIn={userSignIn}
         />
       ) : (
         <SignUp
           visiblePassword={visiblePassword}
-          logInSubmit={logInSubmit}
-          onChangeSignUp={onChangeSignUp}
+          signUpSubmit={signUpSubmit}
+          onChangeSign={onChangeSign}
           isVisible={isVisible}
+          userSignUp={userSignUp}
         />
       )}
     </div>

@@ -5,41 +5,47 @@ import { PasswordVisibleBtn } from "../LoginInput/PasswordVisibleBtn/PasswordVis
 export default function SignUp({
   visiblePassword,
   isVisible,
-  logInSubmit,
-  onChangeSignUp,
+  signUpSubmit,
+  onChangeSign,
+  userSignUp,
 }) {
   return (
-    <form onSubmit={logInSubmit}>
+    <form onSubmit={signUpSubmit}>
       <LoginInput
         labelText="Login"
         inputType="text"
         userName="login"
-        onChangeSignUp={onChangeSignUp}
+        onChangeSign={onChangeSign}
+        userValue={userSignUp.login}
       />
       <LoginInput
         labelText="Full name"
         inputType="text"
         userName="name"
-        onChangeSignUp={onChangeSignUp}
+        onChangeSign={onChangeSign}
+        userValue={userSignUp.name}
       />
       <LoginInput
         labelText="Email"
         inputType="email"
         userName="email"
-        onChangeSignUp={onChangeSignUp}
+        onChangeSign={onChangeSign}
+        userValue={userSignUp.email}
       />
       <LoginInput
         labelText="Phone number"
         inputType="tel"
         userName="phone"
-        onChangeSignUp={onChangeSignUp}
+        onChangeSign={onChangeSign}
+        userValue={userSignUp.phone}
       />
       <LoginInput
         labelText="Password"
         inputType={`${isVisible ? "text" : "password"}`}
         userName="password"
         minLength={8}
-        onChangeSignUp={onChangeSignUp}
+        onChangeSign={onChangeSign}
+        userValue={userSignUp.password}
       >
         <PasswordVisibleBtn
           visiblePassword={visiblePassword}

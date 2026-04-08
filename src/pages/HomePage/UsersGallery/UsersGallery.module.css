@@ -4,6 +4,7 @@
 }
 
 .galleryList {
+  position: relative;
   display: flex;
   justify-content: center;
   overflow-y: scroll;

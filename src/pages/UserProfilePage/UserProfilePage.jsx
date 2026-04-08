@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { UserDashboard } from "./UserDashboard/UserDashboard";
 import { useFetch } from "../../hooks/useFetch";
 import { UserMainInfo } from "./UserMainInfo/UserMainInfo";
+import Loader from "../../components/ui";
 
 export const UserProfilePage = () => {
   const { userId } = useParams();
@@ -12,7 +13,7 @@ export const UserProfilePage = () => {
   return (
     <>
       {!data ? (
-        <h1>Loading...</h1>
+        <Loader isVisible={true} />
       ) : (
         <>
           <UserDashboard user={data} />

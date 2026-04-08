@@ -2,13 +2,14 @@ import { Link } from "react-router";
 import { UsersItem } from "./UserItem";
 import s from "./UserList.module.css";
 import { useFetch } from "../../../hooks/useFetch";
+import Loader from "../../../components/ui";
 
 export const UserList = () => {
   const [data] = useFetch("https://67f80d0c2466325443ebae62.mockapi.io/users");
   return (
     <ul className={s.usersList}>
       {!data ? (
-        <li>Loading...</li>
+        <Loader isVisible={true} />
       ) : (
         data.map((user) => (
           <Link to={`${user.id}`} key={user.id} className={s.userLink}>

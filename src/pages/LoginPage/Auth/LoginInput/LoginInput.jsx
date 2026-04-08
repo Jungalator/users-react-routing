@@ -5,8 +5,9 @@ export const LoginInput = ({
   inputType,
   userName,
   minLength,
-  onChangeSignUp,
+  onChangeSign,
   children,
+  userValue,
 }) => {
   return (
     <label className={s.formLabel}>
@@ -14,10 +15,11 @@ export const LoginInput = ({
       <input
         className={s.formInput}
         type={inputType}
-        name={userName}
+        name={`${userName}`}
+        value={userValue}
         required
         minLength={minLength}
-        onChange={onChangeSignUp}
+        onChange={onChangeSign}
       />
       {children}
     </label>

@@ -1,5 +1,6 @@
 .usersList {
   margin: 20px auto 0 auto;
+  position: relative;
   width: 73.5%;
   height: 79vh;
   border: 0;

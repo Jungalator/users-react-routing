@@ -1,3 +1,4 @@
+import Loader from "../../../components/ui";
 import { useFetch } from "../../../hooks/useFetch";
 import { GalleryItem } from "./GalleryItem";
 import s from "./UsersGallery.module.css";
@@ -6,7 +7,7 @@ export const UsersGallery = ({ handleOpenImg, data }) => {
     <section className={s.gallerySection}>
       <ul className={s.galleryList}>
         {!data ? (
-          <li>Loading...</li>
+          <Loader isVisible={true} />
         ) : (
           data.map((user, index) => (
             <GalleryItem
